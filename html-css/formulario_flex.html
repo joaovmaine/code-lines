@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário Flex</title>
+
+  <style>
+    /* Estilos padrão */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    /* Reiniciando as margens dos títulos */
+    h1, h2, h3, h4, h5, h6 {
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      width: 400px; /* Ajuste conforme necessário */
+      margin: auto;
+    }
+    .form {
+      display: flex;
+      flex-direction: column; /* Definindo a direção do layout para o modo vertical */
+    }
+    /* Container onde colocamos os grupos de campos */
+    .form .form-body {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .form-title {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    /* Este elemento está dentro de um container FLEX e também é um container FLEX. Se não fosse um container, não precisaria do 'display: flex' */
+    .form .form-field {
+      display: flex;
+      flex: 1;
+      margin-bottom: 10px;
+      align-items: center; /* Alinha os itens verticalmente */
+    }
+    .form .form-field label {
+      color: #999;
+      min-width: 80px;
+    }
+    .form .form-body .form-field input {
+      flex: 1;
+      border: 1px solid #999;
+      border-radius: 8px;
+      padding: 10px;
+      margin-left: 8px;
+    }
+    .form button[type="submit"] {
+      border-radius: 5px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .form button[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+
+  <body>
+    <div class="container">
+      <h2 class="form-title">Preencha os dados abaixo</h2>
+        <form action="" class="form">
+          <div class="form-body">
+
+            <div class="form-field">
+            <label for="nome">Nome:</label>
+            <input id="nome" type="text">
+            </div>
+
+            <div class="form-field">
+            <label for="email">E-mail:</label>
+            <input id="email" type="email">
+            </div>
+
+            <div class="form-field">
+            <label for="whatsapp">WhatsApp:</label>
+            <input id="whatsapp" type="tel">
+            </div>
+
+          </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+  </body>
+</html>
